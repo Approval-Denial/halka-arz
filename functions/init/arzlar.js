@@ -32,7 +32,7 @@ const arzlar = async () => {
 
           const özetBilgilerList = $$('article.sp-arz-extra ul.aex-in li');
           const bilgiler = [];
-          özetBilgilerList.each((index, element) => {
+          özetBilgilerList.each(async(index, element) => {
             const title = $$(element).find('h5').text().trim();
             const pElements = $$(element).find('p');
             const bilgiArray = [];
@@ -60,6 +60,7 @@ const arzlar = async () => {
           data =  { error: "404", text: "Not found" }
         }
       });
+     await wait(1000);
       return data
     } else {
       data =  { error: "404", text: "Not found" }

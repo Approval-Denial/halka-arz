@@ -59,7 +59,8 @@ const taslak_arzlar = async () => {
           data =  { error: "404", text: "Not found" }
         }
       });
-      return data
+      await wait(1000);
+      return data;
     } else {
       data =  { error: "404", text: "Not found" }
     }

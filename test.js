@@ -9,6 +9,11 @@ xd.init();
 
 
 
+arzlar().then((data) => {
+    console.log(data)
+});
+
+
 xd.on(Events.Duyurular,(data) => {
     console.log(data)
 })

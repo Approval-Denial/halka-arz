@@ -59,6 +59,7 @@ const acik_arzlar = async () => {
           return data =  { error: "404", text: "Not found" }
         }
       });
+      await wait(1000);
       return data;
     } else {
       return data =  { error: "404", text: "Not found" }

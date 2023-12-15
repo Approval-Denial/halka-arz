@@ -63,15 +63,15 @@ console.log(data);
 
 
 arzlar().then((data) => {
-setTimeout(() => {console.log(data)}, 10000);
+console.log(data);
 });
 
 taslakArzlar().then((data) => {
-setTimeout(() => {console.log(data)}, 10000);
+console.log(data);
 })
 
 açıkArzlar().then((data) => {
-setTimeout(() => {console.log(data)}, 10000);
+console.log(data);
 });
 ```
 
