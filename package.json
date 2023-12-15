@@ -1,16 +1,38 @@
 {
   "name": "halkarz",
-  "version": "1.10.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Halka arz ile sunulan şirketlerin detaylı verilerini bu modül sayesinde alabilirsiniz.",
+  "main": "./functions/HalkArz.js",
   "dependencies": {
     "axios": "^1.5.0",
     "cheerio": "^1.0.0-rc.12",
+    "eventemitter": "^0.3.3",
+    "five.db": "^0.0.9",
     "halkarz": "^1.0.4"
   },
+  "homepage": "https://discord.gg/luppux",
+  "bugs": {"url": "https://discord.gg/luppux"},
+  "keywords": [
+    "halkarz",
+    "halkaarz",
+    "halka-arz",
+    "arz",
+    "halka",
+    "halka arz",
+    "borsa",
+    "veriler",
+    "analiz",
+    "arz-halka",
+    "arzlar",
+    "duyurular",
+    "duyuru",
+    "borsa-istanbul",
+    "borsalar"
+  ],
+  "contributors": [{"name": "approval-denial", "url": "https://github.com/approval-denial"},{"name": "Bes-js", "url": "https://github.com/Bes-js"}],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Approval",
-  "license": "ISC"
+  "author": {"name": "approval-denial", "url": "https://github.com/approval-denial"},
+  "license": "MIT"
 }

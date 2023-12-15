@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to halkarz 👋</h1>
+<h1 align="center">halkarz 👋</h1>
 <p>
   <a href="https://www.npmjs.com/package/halkarz" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/halkarz.svg">
@@ -13,41 +13,72 @@
 
 > Halka arz ile sunulan şirketlerin detaylı verilerini bu modül sayesinde alabilirsiniz.
 
-### 🏠 [Homepage](https://github.com/Approval-Denial/halka-arz)
+### 🏠 [Github](https://github.com/Approval-Denial/halka-arz)
 ### ⚡ [Npm](https://www.npmjs.com/package/halkarz)
 
-## Install
+## Yükleme
 
 ```sh
+/* NPM İçin */
 npm i halkarz
+
+/* Yarn İçin */
+yarn add harkarz
+```
+
+
+## Örnekler
+
+```js
+const { HalkArz, Events, açıkArzlar, arzlar, taslakArzlar } = require("harkarz");
+const arzClient = new HalkArz();
+
+arzClient.init(); // Event Emitter
+
+arzClient.on(Events.Duyurular,async(data) => {
+console.log(data);
+/*
+{
+  firmaAdi: '',
+  bistKodu: '',
+  baslik: '',
+  icerik: '',
+  islemTarihi: '',
+  url: ''
+}
+*/
+});
+
+arzClient.on(Events.Analizler,async(data) => {
+console.log(data);
+/*
+{
+  baslik: '',
+  icerik: '',
+  islemTarihi: '',
+  url: ''
+}
+*/
+});
+
+
+arzlar().then((data) => {
+setTimeout(() => {console.log(data)}, 10000);
+});
+
+taslakArzlar().then((data) => {
+setTimeout(() => {console.log(data)}, 10000);
+})
+
+açıkArzlar().then((data) => {
+setTimeout(() => {console.log(data)}, 10000);
+});
 ```
 
 
 
-## Author
+## Author's
 
 * Website: approvalcyber.dev
 * Twitter: [@approvalcyber](https://twitter.com/approvalcyber)
-* Github: [@approval-denial](https://github.com/approval-denial)
-
-## Example
-
-```js
-const {arzlar,taslak_arzlar,acik_arzlar} = require("./index")
-
-acik_arzlar()
-.then(data =>{
-  setTimeout(() => {
-    console.log(data)
-  }, 10000);
-})
- 
-  // I added timeout because it needs time when pulling data
-```
-
-
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
+* Github: [@approval-denial](https://github.com/approval-denial), [@Bes-js](https://github.com/Bes-js)
